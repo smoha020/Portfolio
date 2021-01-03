@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: green;
+}
+.nav {
+    background: #fff;
+    color: white;
+}
+.nav .nav-name {
+    display: none;
+}
+.nav .nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .nav-options div {
+    display: inline-block;
+    color: rgb(87, 85, 85);
+    padding: 0.5rem 0.9rem;
+    border-radius: 3px;
+    font-size: small;
+    box-sizing: border-box;
+}
+.nav .nav-options div:hover {
+    background: rgb(223, 222, 222);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    background: #e3f2fd;
+    height: 618px;
+}
+/*---PROFILE---*/
+.prof-cont {
+    height: 100%;
+    color: rgb(87, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prof-cont .prof-wrap div {
+    margin: 1rem  0;
+}
+/*---PROJECTS---*/
+.pic-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.pic {
+    width: 250px;
+    margin: 1rem;
+}
+.pic img {
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*---MEDIA QUERIES---*/
+@media screen and (min-width: 380px) {
+    .pic {
+      width: 330px;
+    }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (min-width: 500px) {
+    .pic {
+      width: 360px;
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (min-width: 800px) {
+    .nav, .content {
+      display: inline-block;
+      height: 100vh;
+      vertical-align: top;
+    }
+    .nav {
+        width: 25%;
+    }
+    .nav .nav-name {
+        display: block;
+        background: blue;
+        height: 30%;
+    }
+    .nav .nav-options div{
+        display: block;
+        height: 50px;
+        width: 100%;
+    }    
+    .content {
+        width: 75%;
+    }
 }
