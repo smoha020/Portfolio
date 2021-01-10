@@ -9,6 +9,7 @@ function Profile(props) {
                 <h1>Said Mohamed</h1>
                 <div>(619) 376-8416</div>
                 <div>smoha020@ucr.edu</div>
+                <div>Youtube Channel: <a href='#'>Coming Soon! </a></div>
                 <div>San Diego, CA</div>
             </div>
         </div>

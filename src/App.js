@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Profile from './Components/Profile'
 import Projects from './Components/Projects'
-import Youtube from './Components/Youtube'
 import Nav from './Components/Nav'
 
 
@@ -19,14 +18,12 @@ class App extends Component {
     return (
       <Router>
         <Nav />
-          <div className='content'>
-            <Route exact path="/" render={props => ( <Profile
-                greet={this.state.greet} />) }/>
-            <Route exact path="/Projects" render={props => ( <Projects
-                greet={this.state.greet} />) }/>
-            <Route exact path="/Youtube" render={props => ( <Youtube
-                greet={this.state.greet} />) }/>
-          </div>
+        <div className='content'>
+          <Route exact path="/" render={props => ( <Profile
+              greet={this.state.greet} />) }/>
+          <Route exact path="/Projects" render={props => ( <Projects
+              greet={this.state.greet} />) }/>
+        </div>
       </Router>
     )
   }

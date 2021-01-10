@@ -3,9 +3,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body {
-    background: green;
-}
+
 .nav {
     background: #fff;
     color: white;
@@ -19,23 +17,31 @@ body {
     align-items: center;
 }
 .nav .nav-options div {
-    display: inline-block;
     color: rgb(87, 85, 85);
     padding: 0.5rem 0.9rem;
     border-radius: 3px;
     font-size: small;
     box-sizing: border-box;
 }
+.options-sub .sub-child {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5rem;
+}
+.options-sub .icon {
+    color: #00b0ff;
+}
 .nav .nav-options div:hover {
-    background: rgb(223, 222, 222);
+    background: rgb(247, 243, 243);
 }
 a {
     color: white;
     text-decoration: none;
 }
 .content {
-    background: #e3f2fd;
-    height: 618px;
+    background: rgb(247, 243, 243);
+    height: 96vh;
+    min-height: 450px;
 }
 /*---PROFILE---*/
 .prof-cont {
@@ -48,6 +54,10 @@ a {
 .prof-cont .prof-wrap div {
     margin: 1rem  0;
 }
+.prof-wrap a {
+    color: rgb(87, 85, 85);
+    cursor: auto;
+}
 /*---PROJECTS---*/
 .pic-cont {
     display: flex;
@@ -59,41 +69,84 @@ a {
 .pic {
     width: 250px;
     margin: 1rem;
+    position: relative;
 }
 .pic img {
     width: 100%;
 }
 
+.pic .pic-sub {
+    opacity: 1;
+    box-shadow: 2px 2px 12px rgb(196, 192, 192);
+}
+.pic .middle {
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    background: black;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.pic:hover .middle {
+    opacity: 0.6
+}
+.pic:hover .middle h3 {
+    margin: 0.5rem;
+}
+.pic:hover .middle p{
+    margin: 0.3rem;
+}
 /*---MEDIA QUERIES---*/
 @media screen and (min-width: 380px) {
     .pic {
       width: 330px;
+    }
+    .content {
+        background: rgb(247, 243, 243);
+        height: 96vh;
+        min-height: 580px;
     }
 }
 @media screen and (min-width: 500px) {
     .pic {
       width: 360px;
     }
+    .content {
+        background: rgb(247, 243, 243);
+        height: 96vh;
+        min-height: 650px;
+    }
 }
 @media screen and (min-width: 800px) {
     .nav, .content {
       display: inline-block;
       height: 100vh;
+      min-height: 700px;
       vertical-align: top;
     }
     .nav {
         width: 25%;
     }
     .nav .nav-name {
-        display: block;
-        background: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #00b0ff;
         height: 30%;
     }
-    .nav .nav-options div{
-        display: block;
-        height: 50px;
+    .nav .nav-options {
+        align-items: stretch;
+        flex-direction: column;
         width: 100%;
-    }    
+    }
+    .nav .nav-options div { 
+        padding-top: 0.9rem;
+        height: 50px;
+    }
     .content {
         width: 75%;
     }
